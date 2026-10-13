@@ -1,0 +1,1 @@
+# 26-27-Veritaban-projesi
