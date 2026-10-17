@@ -65,5 +65,5 @@ Projeyi yerel ortamınızda (local) çalıştırmak için izlenecek adımlar:
 ---
 -- daha sonra düzeltilebilir (khoder- ilk değişiklik 10/17/2026)
 ## 👥 Geliştiriciler
-* [Adınız Soyadınız] - [Öğrenci Numaranız]
-* [Grup Arkadaşınızın Adı] - [Öğrenci Numaranız]
+* [KHODER ALMOHAMMAD ALKHAL] - [451973]
+* [ABDULKADİR ELABD ELHAMED] - [452625]
