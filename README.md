@@ -10,9 +10,9 @@ Bir otelin oda yönetimi, misafir kayıtları, rezervasyon süreçleri, check-in
 ---
 
 ## 🛠️ Kullanılan Teknolojiler
-* **Veritabanı:** MySQL / PostgreSQL / MSSQL
-* **Backend:** [Seçtiğin teknolojiye göre: Flask / Spring Boot / .NET]
-* **Frontend:** [HTML/CSS/JS veya ilgili arayüz teknolojisi]
+* **Veritabanı:** MySQL
+* **Backend:** [Node.js]
+* **Frontend:** [HTML/CSS]
 * **Test Araçları:** Postman / Swagger
 
 ---
