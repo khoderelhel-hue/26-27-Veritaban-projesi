@@ -1,0 +1,60 @@
+create table hasta (
+	hastaid INT Primary key,
+    tckimlik INT UNIQUE,
+    hastaad varchar(30),
+    hastasoyad varchar(50)
+);
+create table laboratuvar(
+	laboratuvarid INT primary key,
+	laboratuvaradi varchar(30),
+    konum varchar(50)
+);
+create table poliklinik(
+	kat INT,
+    poliklinikid INT primary key,
+    poliklinikadi varchar(30)
+);
+create table doktor(
+	doktorid INT primary key,
+    doktorad varchar(30),
+    doktorsoyad varchar(50),
+    poliklinikid INT,
+    constraint FK_poliklinik_doktor foreign key (poliklinikid) references poliklinik(poliklinikid)
+);
+create table tahlil(
+	tahlilid INT primary key,
+    tahlilad varchar(30),
+	aciklama varchar(50),
+    laboratuvarid INT,
+    constraint FK_laboratuvar_tahlil foreign key (laboratuvarid) references laboratuvar(laboratuvarid)
+);
+create table servis(
+	servisid INT primary key,
+    servisadi varchar(30),
+    poliklinikid INT,
+    constraint FK_poliklinik_servis foreign key (poliklinikid) references poliklinik(poliklinikid)
+);
+create table hemsire(
+	hemsireid INT primary key,
+    hemsiread varchar(30),
+    hemsiresoyad varchar(50),
+    servisid INT,
+    constraint FK_hemsire_servis foreign key (servisid) references servis(servisid)
+);
+create table tahlilistek(
+	hastaid INT,
+    tahlilid INT,
+    doktorid INT,
+	constraint FK_hasta_tahlil foreign key (hastaid) references hasta(hastaid),
+    constraint FK_tahlil_tahlil foreign key (tahlilid) references tahlil(tahlilid),
+    constraint FK_doktor_tahlil foreign key (doktorid) references doktor(doktorid),
+    hastaad varchar(30),
+    tarih DATE,
+    saat TIME
+);
+create table muayene_olus(
+	hastaid INT,
+    poliklinikid INT,
+	constraint FK_hasta_muayene foreign key (hastaid) references hasta(hastaid),
+    constraint FK_poliklinik_muayene foreign key (poliklinikid) references poliklinik(poliklinikid)
+);
